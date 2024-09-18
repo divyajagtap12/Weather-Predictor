@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--linked css-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking BoxIcon for Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="icons/icon3.png" />
+    <title>Weather State</title>
+  </head>
+  <body>
+    <!-- Main content -->
+    <div class="wrapper">
+      <!--ye div pura till last forecast not moon and palette-->
+      <!--1st page -->
+      <div class="container"></div>
+      <!--container for city and auto detect-->
+      <header><i class="bx bx-left-arrow-alt"></i>Weather App</header>
+      <!--heading weather app with left arrow-->
+      <section class="input-part">
+        <!--ye sec only for 1st page auto and city -->
+        <!--section inside container-->
+        <p class="info-txt"></p>
+        <div class="content">
+          <!--to input city-->
+          <input
+            type="text"
+            spellcheck="false"
+            placeholder="Enter City Name"
+            required
+          />
+          <div class="separator"></div>
+          <!--seperator between city and location-->
+          <button>Location auto-detect</button
+          ><!--location button-->
+        </div>
+      </section>
+      <section class="weather-part">
+        <!--ye sec city ke liye bas temp and 4 infos-->
+        <img src="" alt="Weather Icon" />
+        <div class="temp">
+          <span class="numb">_</span>
+          <span class="deg">°</span>C
+        </div>
+        <div class="weather">_ _</div>
+        <div class="location">
+          <i class="bx bx-map"></i>
+          <span>_, _</span>
+        </div>
+        <div class="bottom-details">
+          <div class="column feels">
+            <i class="bx bxs-thermometer"></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">_</span>
+                <span class="deg">°</span>C
+              </div>
+              <p>Feels like</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <i class="bx bxs-droplet-half"></i>
+            <div class="details">
+              <span>_</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="column wind">
+            <i class="bx bx-wind"></i>
+            <div class="details">
+              <span>_</span>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+          <div class="column date-time">
+            <i class="bx bx-time"></i>
+            <div class="details">
+              <span>_</span>
+              <p>Date & Time</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="personalized-message"></div>
+      <!-- Chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <!-- Canvas for Weather Chart -->
+
+      <section class="forecast" hidden>
+        <!--ek section for pura forecast part ka-->
+        <section class="charts" id="chartSection">
+          <canvas id="weatherChart"></canvas>
+          <!--hourly part-->
+        </section>
+        <!-- Forecast for Next 7 Days -->
+        <div class="forecast-details"></div>
+        <!--this is for 7 cards-->
+      </section>
+    </div>
+    <!-- Dark mode toggle -->
+    <div class="dark-mode">
+      <!--rem ek div moon button ka-->
+      <span class="dark-mode-btn">
+        <i class="bx bx-moon"></i>
+      </span>
+    </div>
+    <!-- Color picker -->
+    <div class="color-palette">
+      <!--ek div color palette ka -->
+      <span class="theme-color"></span>
+      <span class="theme-color"></span>
+      <span class="theme-color"></span>
+    </div>
+    <section class="copyright">
+      <p>
+        Weather State By
+        <a href="https://github.com/divyajagtap12" target="_blank">Divya</a>
+      </p>
+    </section>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <!--link script file to html-->
+  </body>
+</html>
